@@ -2,11 +2,15 @@
 
 Add-On for Google Sheets to help those working with web archives.
 
-Features
+## Features
 
 * Custom functions that use the [Memento API](http://timetravel.mementoweb.org/guide/api/) (specifically the [TimeGate](http://timetravel.mementoweb.org/guide/api/#timegate)) to look up whether a given archive holds a given URL. Currenly supports:
     * UK Web Archive via `=WEBARCHIVE_STATUS_UKWA(<url>)`
     * Internet Archive via `=WEBARCHIVE_STATUS_IA(<url>)`
+
+There's probably quite a lot more this could do, given [these capabilities](https://developers.google.com/apps-script/guides/sheets).
+
+The main restriction here is [the 20,000 calls/day default quota per user](https://developers.google.com/apps-script/guides/services/quotas) -- you should bare this in mind if attempting to check large numbers of URLs.
 
 # Getting Started
 
