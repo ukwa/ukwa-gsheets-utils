@@ -32,5 +32,5 @@ That's a view-only link to the Google Script view, you'll need to request permis
 * Add functions to return counts? e.g. number of copies, or number of URLs starting like X?
 * Add functions return the archived URL?
 * Add button to replace URLs with archived URLs?
-* Add button to colour cells holding URLs based on archival status of URL? (Could also be applied to Google Docs?)
+* Add button to colour cells holding URLs based on archival status of URL? (Could also be applied to [Google Docs](https://developers.google.com/apps-script/guides/docs)? [e.g. get all links](https://stackoverflow.com/questions/18727341/get-all-links-in-a-document))
 
