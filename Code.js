@@ -40,7 +40,7 @@ function onOpen() {
  * shows a popup informing the user of the new functions that are available.
  */
 function use() {
-  var title = 'UK Web Archive Functions';
+  var title = 'UKWA Google Sheets Functions';
   var message = 'The functions WEBARCHIVE_STATUS_UKWA and WEBARCHIVE_STATUS_IA are now available in ' +
       'this spreadsheet. More information is available in the function help ' +
       'box that appears when you start using them in a formula.';
