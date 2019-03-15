@@ -26,11 +26,13 @@ That's a view-only link to the Google Script view, you'll need to request permis
 
 # Ideas
 
-* Add custom functions to support TNA and Parliamentary archives TimeGates?
-* Add custom function to talk to the Memento Aggregator? Needs to return archival URL rather than just the status?
-* Add functions to return first/last memento datestamps?
-* Add functions to return counts? e.g. number of copies, or number of URLs starting like X?
-* Add functions return the archived URL?
-* Add button to replace URLs with archived URLs?
-* Add button to colour cells holding URLs based on archival status of URL? (Could also be applied to [Google Docs](https://developers.google.com/apps-script/guides/docs)? [e.g. get all links](https://stackoverflow.com/questions/18727341/get-all-links-in-a-document))
-
+* Via Memento API:
+    * Add custom functions to support TNA and Parliamentary archives TimeGates?
+    * Add custom function to talk to the Memento Aggregator? Needs to return archival URL rather than just the status?
+    * Add functions to return first/last memento datestamps?
+    * Add functions to return counts? e.g. number of copies, or number of URLs starting like X?
+    * Add functions return the archived URL?
+    * Add button to replace URLs with archived URLs?
+    * Add button to colour cells holding URLs based on archival status of URL? (Could also be applied to [Google Docs](https://developers.google.com/apps-script/guides/docs)? [e.g. get all links](https://stackoverflow.com/questions/18727341/get-all-links-in-a-document))
+* Via suitably-exposed W3ACT data:
+    * Add a custom function to take a URL and report if there is a record in W3ACT that covers it? (and link to it?) Has it cleared the criteria for NPLD?
