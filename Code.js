@@ -66,6 +66,23 @@ function WEBARCHIVE_STATUS_UKWA(input) {
 }
 
 /**
+ * Checks the status of a URL at the UK Government Web Archive.
+ * @param {String} url The URL to check, e.g. https://www.gov.uk/
+ * @return {Number} The HTTP status code of that URL in the archive. i.e. 404 means it's not in the archive.
+ * @customFunction
+ */
+function WEBARCHIVE_STATUS_UKGWA(input) {
+  if(input == "") {
+    return "";
+  }
+  var url = "https://webarchive.nationalarchives.gov.uk/" + input;
+  var response = UrlFetchApp.fetch(url, {'muteHttpExceptions': true});
+  // Try to avoid going too fast, due to 20,000 calls/day default quota per user (https://developers.google.com/apps-script/guides/services/quotas).
+  Utilities.sleep(250);
+  return response.getResponseCode();
+}
+
+/**
  * Checks the status of a URL at the Internet Archive.
  * @param {String} url The URL to check, e.g. https://www.bl.uk/
  * @return {Number} The HTTP status code of that URL in the archive. i.e. 404 means it's not in the archive.
