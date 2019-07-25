@@ -20,7 +20,7 @@
  */
 
 /**
- * @fileoverview Provides the custom functions WEBARCHIVE_STATUS_UKWA and WEBARCHIVE_STATUS_IA and
+ * @fileoverview Provides the custom functions WEBARCHIVE_STATUS_UKWA, WEBARCHIVE_STATUS_UKGWA and WEBARCHIVE_STATUS_IA and
  * the helper functions that they use.
  * @OnlyCurrentDoc
  */
@@ -41,7 +41,7 @@ function onOpen() {
  */
 function use() {
   var title = 'UKWA Google Sheets Functions';
-  var message = 'The functions WEBARCHIVE_STATUS_UKWA and WEBARCHIVE_STATUS_IA are now available in ' +
+  var message = 'The functions WEBARCHIVE_STATUS_UKWA, WEBARCHIVE_STATUS_UKGWA and WEBARCHIVE_STATUS_IA are now available in ' +
       'this spreadsheet. More information is available in the function help ' +
       'box that appears when you start using them in a formula.';
   var ui = SpreadsheetApp.getUi();
@@ -59,6 +59,23 @@ function WEBARCHIVE_STATUS_UKWA(input) {
     return "";
   }
   var url = "https://www.webarchive.org.uk/wayback/archive/" + input;
+  var response = UrlFetchApp.fetch(url, {'muteHttpExceptions': true});
+  // Try to avoid going too fast, due to 20,000 calls/day default quota per user (https://developers.google.com/apps-script/guides/services/quotas).
+  Utilities.sleep(250);
+  return response.getResponseCode();
+}
+
+/**
+ * Checks the status of a URL at the UK Government Web Archive.
+ * @param {String} url The URL to check, e.g. https://www.gov.uk/
+ * @return {Number} The HTTP status code of that URL in the archive. i.e. 404 means it's not in the archive.
+ * @customFunction
+ */
+function WEBARCHIVE_STATUS_UKGWA(input) {
+  if(input == "") {
+    return "";
+  }
+  var url = "https://webarchive.nationalarchives.gov.uk/" + input;
   var response = UrlFetchApp.fetch(url, {'muteHttpExceptions': true});
   // Try to avoid going too fast, due to 20,000 calls/day default quota per user (https://developers.google.com/apps-script/guides/services/quotas).
   Utilities.sleep(250);
