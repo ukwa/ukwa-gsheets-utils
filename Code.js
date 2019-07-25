@@ -20,7 +20,7 @@
  */
 
 /**
- * @fileoverview Provides the custom functions WEBARCHIVE_STATUS_UKWA and WEBARCHIVE_STATUS_IA and
+ * @fileoverview Provides the custom functions WEBARCHIVE_STATUS_UKWA, WEBARCHIVE_STATUS_UKGWA and WEBARCHIVE_STATUS_IA and
  * the helper functions that they use.
  * @OnlyCurrentDoc
  */
@@ -41,7 +41,7 @@ function onOpen() {
  */
 function use() {
   var title = 'UKWA Google Sheets Functions';
-  var message = 'The functions WEBARCHIVE_STATUS_UKWA and WEBARCHIVE_STATUS_IA are now available in ' +
+  var message = 'The functions WEBARCHIVE_STATUS_UKWA, WEBARCHIVE_STATUS_UKGWA and WEBARCHIVE_STATUS_IA are now available in ' +
       'this spreadsheet. More information is available in the function help ' +
       'box that appears when you start using them in a formula.';
   var ui = SpreadsheetApp.getUi();
