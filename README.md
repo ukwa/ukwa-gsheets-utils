@@ -38,3 +38,18 @@ That's a view-only link to the Google Script view, you'll need to request permis
 * Via suitable custom API:
     * Add a custom function to take a URL and report if there is a record in W3ACT that covers it? (and link to it?) Has it cleared the criteria for NPLD?
     * Add a custom function that checks holdings, but also immediately enqueues a request for the URL. i.e. handle in-scope nominations quickly.
+
+
+# Deployment
+
+0. Check which version is currently live (these are simple version numbers controlled by the deployment service)
+1. Get local repo up to date
+2. clasp login as main GMail account
+3. clasp push
+4. Go to https://script.google.com/ and open up the project 'UKWA Google Sheets Utilities'
+5. Verify changes are present.
+6. Click 'Publish > Deploy as Sheets add-on...'
+7. Update version info etc. as needed.
+8. Follow publication workflow until https://chrome.google.com/webstore/detail/dghejanopbolppcgmihfhnaedjfjoaik updates (or https://chrome.google.com/webstore/detail/ukwa-google-sheets-utilit/dghejanopbolppcgmihfhnaedjfjoaik)
+9. Check version is updated.
+
