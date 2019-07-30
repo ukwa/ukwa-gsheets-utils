@@ -55,13 +55,14 @@ function use() {
  * @customFunction
  */
 function WEBARCHIVE_STATUS_UKWA(input) {
+  console.log("Checking UKWA...")
   if(input == "") {
     return "";
   }
   var url = "https://www.webarchive.org.uk/wayback/archive/" + input;
   var response = UrlFetchApp.fetch(url, {'muteHttpExceptions': true});
   // Try to avoid going too fast, due to 20,000 calls/day default quota per user (https://developers.google.com/apps-script/guides/services/quotas).
-  Utilities.sleep(250);
+  //Utilities.sleep(250);
   return response.getResponseCode();
 }
 
@@ -72,13 +73,12 @@ function WEBARCHIVE_STATUS_UKWA(input) {
  * @customFunction
  */
 function WEBARCHIVE_STATUS_UKGWA(input) {
+  console.log("Checking UKGWA...")
   if(input == "") {
     return "";
   }
   var url = "https://webarchive.nationalarchives.gov.uk/" + input;
   var response = UrlFetchApp.fetch(url, {'muteHttpExceptions': true});
-  // Try to avoid going too fast, due to 20,000 calls/day default quota per user (https://developers.google.com/apps-script/guides/services/quotas).
-  Utilities.sleep(250);
   return response.getResponseCode();
 }
 
@@ -89,13 +89,13 @@ function WEBARCHIVE_STATUS_UKGWA(input) {
  * @customFunction
  */
 function WEBARCHIVE_STATUS_IA(input) {
+  console.log("Checking IA...")
   if(input == "") {
     return "";
   }
   var url = "https://web.archive.org/web/" + input;
   var response = UrlFetchApp.fetch(url, {'muteHttpExceptions': true});
-  // Try to avoid going too fast.
-  Utilities.sleep(250);
+  
   return response.getResponseCode();
 }
 

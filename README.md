@@ -53,3 +53,4 @@ That's a view-only link to the Google Script view, you'll need to request permis
 8. Follow publication workflow until https://chrome.google.com/webstore/detail/dghejanopbolppcgmihfhnaedjfjoaik updates (or https://chrome.google.com/webstore/detail/ukwa-google-sheets-utilit/dghejanopbolppcgmihfhnaedjfjoaik)
 9. Check version is updated.
 
+If changes are made and tested via the Google Apps Script UI then we can use `clasp pull` to get the new version and commit it to git.
