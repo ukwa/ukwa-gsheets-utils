@@ -2,6 +2,8 @@
 
 Add-On for Google Sheets to help those working with web archives.
 
+This project is not under development at present, see [this issue for more details](https://github.com/ukwa/ukwa-gsheets-utils/issues/7).
+
 ## Features
 
 * Custom functions that use the [Memento API](http://timetravel.mementoweb.org/guide/api/) (specifically the [TimeGate](http://timetravel.mementoweb.org/guide/api/#timegate)) to look up whether a given archive holds a given URL. Currenly supports:
